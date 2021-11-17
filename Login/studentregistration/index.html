@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Registration form</title>
+
+    <!-- Font Icon -->
+    <link href="images/small rm.png" rel="icon">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+               <!-- <div class="signup-img_0">
+                    <img src="images/large_roomanytime_0.png" alt="">
+                </div>-->
+                <div class="signup-img">
+                    <img src="images/large_roomanytime_0.png" alt="">
+                    <img src="images/signup-img.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form action="database/register_a.php" method="post" id="register-form" enctype="multipart/form-data">
+                        <h2>student registration form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">Name :</label>
+                                <input type="text" name="first_name" id="first_name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name :</label>
+                                <input type="text" name="last_name" id="last_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" id="email" required/>
+                        </div>
+                        <!--national ID/Passport-->
+                        <div class="form-group">
+                            <label for="national_id">National ID / Passport :</label>
+                            <input type="text" name="national_id" id="national_id" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="university">University / Institution:</label>
+                            <input type="text" name="university" id="university" required/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="county">County :</label>
+                                <div class="form-select">
+                                    <select name="county" id="county">
+                                        <option value=""></option>
+                                        <option value="kajiado">Kajiado</option>
+                                        <option value="nairobi">Nairobi</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="town">Town :</label>
+                                <div class="form"-select">
+                                    <select name="town" id="town">
+                                        <option value=""></option>
+                                        <option value="olekasasi">Olekasasi</option>
+                                        <option value="Ongata_rongai">Ongata Rongai</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">Date Of Birth :</label>
+                            <input type="text" name="birth_date" id="birth_date" />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">Phone number :</label>
+                            <input type="number" name="phone_number" id="phone_number" required/>
+                        </div>
+                        <!--<div class="form-group">
+                            <label for="course">Course :</label>
+                            <div class="form-select">
+                                <select name="course" id="course">
+                                    <option value=""></option>
+                                    <option value="computer">Computer Operator & Pragramming Assistant</option>
+                                    <option value="desiger">Designer</option>
+                                    <option value="marketing">Marketing</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>-->
+                        
+                        <div class="form-group">
+                            <label for="university_id">University ID :</label>
+                            <input type="number" name="university_id" id="university_id">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="required">Password</label>
+                            <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="required">Retype Password</label>
+                            <input type="password" class="form-control" name="cpass" placeholder="Confirm Password" required="required">
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

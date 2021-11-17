@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Property owners signup-form</title>
+
+    <!-- Font Icon -->
+    <link href="images/small rm.png" rel="icon">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="images/large_roomanytime_0.png" alt="">
+                    <div class="signup-img-content">
+                        <h2>Register now </h2>
+                        <p>To showcase your property !</p>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form action="database/register_a.php" method="post" id="register-form" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="first_name" class="required">First name</label>
+                                    <input type="text" name="first_name" id="first_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Last name</label>
+                                    <input type="text" name="last_name" id="last_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="password" class="required">Password</label>
+                                    <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+                                </div>
+                                <div class="form-input">
+                                    <label for="password" class="required">Retype Password</label>
+                                    <input type="password" class="form-control" name="cpass" placeholder="Confirm Password" required="required">
+                                </div>
+                                <div class="form-input">
+                                    <label for="company" class="required">Company</label>
+                                    <input type="text" name="company" id="company" />
+                                </div>
+                                
+                                <div class="form-input">
+                                    <label for="phone_number" class="required">Phone number</label>
+                                    <input type="text" name="phone_number" id="phone_number" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                
+                                <!--<div class="form-select">
+                                    <div class="label-flex">
+                                        <label for="property_type">Property Type</label>
+                                        <a href="#" class="form-link">Property detail</a>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="property_type" id="property_type">
+                                            <option value="Hostel manager">Hostel manager</option>
+                                            <option value="Property Owner">Property Owner</option>
+                                            <option value="Agent">Agent</option>
+                                        </select>
+                                    </div>
+                                </div>-->
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="payment">Property Type</label>
+                                        <a href="#" class="form-link">Property <details></details></a>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cash" checked>
+                                            <label for="cash">Apartment</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cheque">
+                                            <label for="cheque">Full house</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="demand">
+                                            <label for="demand">Hostel</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="businessno">Business registration number</label>
+                                    <input type="text" name="businessno" id="businessno" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="countyid">County approval id</label>
+                                    <input type="text" name="countyid" id="countyid" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="location">Location</label>
+                                    <input type="text" name="location" id="location" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="file">Add images</label>
+                                    <input type="file" name="file" id="file" />
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="donate-us">
+                            <label>Donate us</label>
+                            <div class="price_slider ui-slider ui-slider-horizontal">
+                                <div id="slider-margin"></div>
+                                <span class="donate-value" id="value-lower"></span>
+                            </div>
+                        </div>-->
+                        <div class="form-submit">
+                            <input type="submit" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
