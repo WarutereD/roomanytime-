@@ -9,9 +9,10 @@ if(mysqli_num_rows($sql)>0)
 }
 else
 {
-        $query="INSERT INTO propertylog(First_Name, Last_Name, Email, Password, Company, Phone, Businessno, CountyID, Location, File  ) VALUES ('$first_name', '$last_name', '$email', 'md5($pass)', '$company', '$phone_number', '$businessno', '$countyid', '$location','$file')";
+        $passh = password_hash($pass, PASSWORD_DEFAULT);
+        $query="INSERT INTO propertylog(First_Name, Last_Name, Email, Password, Company, Phone, Businessno, CountyID, Location, File  ) VALUES ('$first_name', '$last_name', '$email', '$passh', '$company', '$phone_number', '$businessno', '$countyid', '$location','$file')";
         $sql=mysqli_query($conn,$query)or die("Could Not Perform the Query");
-        header ("Location: /RoomAnytime\Login\login.html?status=success");
+        header ("Location: /roomanytime-final\property-grid.html?status=success");
  
 }
 

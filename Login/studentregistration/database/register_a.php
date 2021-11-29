@@ -9,9 +9,10 @@ if(mysqli_num_rows($sql)>0)
 }
 else
 {
-        $query="INSERT INTO studentlog(First_Name, Last_Name, Email, NationalID, University, Phone, UniversityID, Password  ) VALUES ('$first_name', '$last_name', '$email',  '$national_id',  '$university',  '$phone_number',  '$university_id', 'md5($pass)')";
+        $passh = password_hash($pass, PASSWORD_DEFAULT);
+        $query="INSERT INTO studentlog(First_Name, Last_Name, Email, NationalID, University, Phone, UniversityID, Password  ) VALUES ('$first_name', '$last_name', '$email',  '$national_id',  '$university',  '$phone_number',  '$university_id', '$passh')";
         $sql=mysqli_query($conn,$query)or die("Could Not Perform the Query");
-        header ("Location: /RoomAnytime\Login\login.html?status=success");
+        header ("Location: /roomanytime-final\property-grid.html?status=success");
   
 }
 
